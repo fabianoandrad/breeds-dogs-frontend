@@ -1,9 +1,10 @@
 <?php
-require_once __DIR__ . '/../src/http-client.php';
-$id = isset($_GET['id']) ? trim($_GET['id']) : null;
-$breed = fetchBreedById($id);
-include __DIR__ . '/../includes/header.html';
+  require_once __DIR__ . '/../src/http-client.php';
+  $id = isset($_GET['id']) ? trim($_GET['id']) : null;
+  $breed = fetchBreedById($id);
+  include __DIR__ . '/../includes/header.html';
 ?>
+
 <section class="breed-page">
   <h2>Detalhes da Raça</h2>
 
@@ -14,7 +15,7 @@ include __DIR__ . '/../includes/header.html';
   </form>
 
   <?php if ($id && $breed === null): ?>
-    <p class="error">Raça não encontrada ou erro ao consultar o backend.</p>
+    <p class="error">Raça não encontrada</p>
   <?php endif; ?>
 
   <?php if ($breed): ?>
@@ -25,7 +26,8 @@ include __DIR__ . '/../includes/header.html';
       <p><?= nl2br(htmlspecialchars($breed['description'] ?? '')) ?></p>
     </article>
   <?php else: ?>
-    <p class="placeholder">Busque uma raça pelo ID ou clique em "Ver detalhes" na lista.</p>
+    <p class="placeholder">Busque uma raça pelo ID</p>
   <?php endif; ?>
 </section>
+
 <?php include __DIR__ . '/../includes/footer.html'; ?>

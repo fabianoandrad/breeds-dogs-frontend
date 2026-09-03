@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../src/http-client.php';
-$breeds = fetchAllBreeds('');
-include __DIR__ . '/../includes/header.html';
+  require_once __DIR__ . '/../src/http-client.php';
+  $breeds = fetchAllBreeds('');
+  include __DIR__ . '/../includes/header.html';
 ?>
 <section class="list">
   <h2>Raças</h2>
@@ -22,4 +22,5 @@ include __DIR__ . '/../includes/header.html';
     </div>
   <?php endif; ?>
 </section>
+
 <?php include __DIR__ . '/../includes/footer.html'; ?>
