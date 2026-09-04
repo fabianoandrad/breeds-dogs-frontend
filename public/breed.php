@@ -15,18 +15,16 @@
   </form>
 
   <?php if ($id && $breed === null): ?>
+    <?php echo "<p class='error'>Raça com ID " . $breed . " não encontrada.</p>"; ?>
     <p class="error">Raça não encontrada</p>
-  <?php endif; ?>
 
-  <?php if ($breed): ?>
+  <?php else: ?>
     <article class="breed-details">
       <h3><?= htmlspecialchars($breed['name'] ?? '—') ?></h3>
       <p><strong>Origem</strong>: <?= htmlspecialchars($breed['origin'] ?? '—') ?></p>
       <p><strong>Grupo</strong>: <?= htmlspecialchars($breed['group'] ?? '—') ?></p>
       <p><?= nl2br(htmlspecialchars($breed['description'] ?? '')) ?></p>
     </article>
-  <?php else: ?>
-    <p class="placeholder">Busque uma raça pelo ID</p>
   <?php endif; ?>
 </section>
 

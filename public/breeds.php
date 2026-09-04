@@ -5,7 +5,7 @@
 ?>
 <section class="list">
   <h2>Raças</h2>
- <!-- <?php echo json_encode($breeds)?> -->
+
   <?php if (empty($breeds)): ?>
     <p>Nenhuma raça encontrada.</p>
 
