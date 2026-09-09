@@ -8,6 +8,9 @@
 <img src="public/assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
 
 
+## Tecnologia usadas
+HTML, CSS e JS
+
 ## 🚀 Rodar projeto frontend
 
 Abrir o terminal no diretório "breeds-dogs-frontend"
