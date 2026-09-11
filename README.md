@@ -15,14 +15,13 @@ HTML, CSS e JS
 
 Abrir o terminal no diretório "breeds-dogs-frontend"
 
-Rode este comando no Powershell:
-
+Rode o arquivo abaixo no Powershell
 ```
-php -S localhost:5500 -t public
+./index.html
 ```
+ou clique duas vezes no arquivo index.html que esta dentro do diretório "breeds-dogs-frontend"
 
-## Abrindo a pagina inicial
-No seu navegador insira este link http://localhost:5500/breeds.php para abrir a pagina inicial
+Após executado um dos dois irá abrir a pagina inicial no seu navegador.
 
 
 ## 🤝 Alunos

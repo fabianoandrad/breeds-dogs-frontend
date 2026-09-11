@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raças de cães</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <img src="assets/img/dog-house-lighten2.png" alt="Logo" class="logo"> 
+    </div>
+    <h2 style="text-align: center; margin-top: 6px;">Raças de cães</h2>
+    <nav style="margin-top: 40px;">
+      <ul>
+        <li class="menu-item active" data-page="breeeds">Raças</li>
+        <li class="menu-item" data-page="favorite">Favoritos</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <h2 id="page-title">Raças</h2>
+      <p id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.</p>
+    </header>
+
+    <main class="content">
+      <section id="breeeds" class="page active">
+        <div id="cards-container">
+          <div id="card">
+            <h3 id="card-title"></h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="favorite" class="page">
+        <div id="cards-container">
+          <div id="card">Item favorito 1</div>
+          <div id="card">Item favorito 2</div>
+          <div id="card">Item favorito 3</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Breeds Dogs</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/getAllBreeds.js"></script>
+</body>
+</html>
