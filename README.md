@@ -2,11 +2,12 @@
 
 > Objetivo da apicação é visualizar informações de raças de cães como foto, nome da raça, temperamento, estimativa de vida e origem.
 
-<img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
-<img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
-<img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
-<img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
-
+<p align="left">
+  <img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
+  <img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
+  <img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
+  <img src="assets/img/cardExemplo.png" width="160" alt="Exemplo imagem">
+</p>
 
 ## Tecnologia usadas
 HTML, CSS e JS
