@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Define o conjunto de caracteres e garante compatibilidade com acentos -->
   <meta charset="UTF-8">
+
+  <!-- Ajusta o layout para dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título exibido na aba do navegador -->
   <title>Raças de cães</title>
+
+  <!-- Importa o arquivo CSS externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Barra lateral fixa -->
   <aside class="sidebar">
+
+    <!-- Container para centralizar o logo -->
     <div style="display: flex; align-items: center; justify-content: center;">
       <img src="assets/img/dog-house-lighten2.png" alt="Logo" class="logo"> 
     </div>
+
+    <!-- Título da sidebar -->
     <h2 style="text-align: center; margin-top: 6px;">Raças de cães</h2>
+
+    <!-- Menu lateral -->
     <nav style="margin-top: 40px;">
       <ul>
+        <!-- Cada item possui um data-page que será usado pelo JS para trocar páginas -->
         <li class="menu-item active" data-page="breeeds">Raças</li>
         <li class="menu-item" data-page="favorite">Favoritos</li>
       </ul>
     </nav>
   </aside>
 
+  <!-- Conteúdo principal -->
   <div class="main">
+
+    <!-- Barra superior com título e subtítulo -->
     <header class="topbar">
       <h2 id="page-title">Raças</h2>
       <p id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.</p>
     </header>
 
+    <!-- Área onde as páginas são trocadas dinamicamente -->
     <main class="content">
+
+      <!-- Página de raças -->
       <section id="breeeds" class="page active">
         <div id="cards-container">
+          <!-- Card modelo que provavelmente será preenchido via JavaScript -->
           <div id="card">
             <h3 id="card-title"></h3>
           </div>
         </div>
       </section>
 
+      <!-- Página de favoritos -->
       <section id="favorite" class="page">
         <div id="cards-container">
+          <!-- Cards fixos apenas como exemplo -->
           <div id="card">Item favorito 1</div>
           <div id="card">Item favorito 2</div>
           <div id="card">Item favorito 3</div>
@@ -45,12 +69,14 @@
       </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="footer">
       <p>© 2026 Breeds Dogs</p>
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
+  <!-- Scripts responsáveis pela lógica da página -->
+  <script src="js/changePages.js"></script>
   <script src="js/getAllBreeds.js"></script>
 </body>
 </html>

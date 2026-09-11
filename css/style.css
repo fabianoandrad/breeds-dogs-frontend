@@ -1,108 +1,110 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  background: #f5f6fa;
+  margin: 0; /* Remove margens padrão do navegador */
+  font-family: Arial, sans-serif; /* Define fonte global */
+  display: flex; /* Permite que sidebar e conteúdo fiquem lado a lado */
+  background: #f5f6fa; /* Cor de fundo suave */
 }
 
-/* Sidebar */
+/* ===== SIDEBAR ===== */
 .sidebar {
-  width: 240px;
-  background: #1e1e2f;
-  color: #fff;
-  height: 100vh;
-  position: fixed;
+  width: 240px; /* Largura fixa da barra lateral */
+  background: #1e1e2f; /* Cor escura */
+  color: #fff; /* Texto branco */
+  height: 100vh; /* Altura total da tela */
+  position: fixed; /* Fixa no lado esquerdo */
 }
 
 .logo {
-  margin: 16px 0px 0px;
-  width: 168px;
+  margin: 16px 0px 0px; /* Espaçamento superior */
+  width: 168px; /* Tamanho da imagem */
 }
 
 .sidebar ul {
-  margin: 0px 16px;
-  list-style: none;
-  padding: 0;
+  margin: 0px 16px; /* Espaçamento lateral */
+  list-style: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove padding padrão */
 }
 
 .menu-item {
-  padding: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  transition: background 0.3s;
+  padding: 14px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de clique */
+  border-radius: 6px; /* Bordas arredondadas */
+  margin-bottom: 8px; /* Espaço entre itens */
+  transition: background 0.3s; /* Animação suave ao passar o mouse */
 }
 
 .menu-item:hover {
-  background: #2e2e42;
+  background: #2e2e42; /* Cor ao passar o mouse */
 }
 
 .menu-item.active {
-  background: #4c4cff;
+  background: #4c4cff; /* Cor do item ativo */
 }
 
-/* Main area */
+/* ===== ÁREA PRINCIPAL ===== */
 .main {
-  margin-left: 240px;
-  width: calc(100% - 240px);
+  margin-left: 240px; /* Empurra o conteúdo para a direita por causa da sidebar */
+  width: calc(100% - 240px); /* Ajusta largura considerando a sidebar */
 }
 
-/* Topbar */
+/* ===== TOPBAR ===== */
 .topbar {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
+  background: #fff; /* Fundo branco */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve */
+  position: sticky; /* Fixa no topo ao rolar */
+  top: 0; /* Posição fixa no topo */
 }
 
 footer {
-  background: #fff;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: calc(100% - 240px);
+  background: #fff; /* Fundo branco */
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Sombra superior */
+  text-align: center; /* Centraliza texto */
+  position: fixed; /* Fixa no rodapé */
+  bottom: 0; /* Gruda na parte inferior */
+  width: calc(100% - 240px); /* Ajusta largura considerando a sidebar */
 }
 
 footer p {
-  color: darkgray;
-  font-size: 10px;
+  color: darkgray; /* Cor do texto */
+  font-size: 10px; /* Tamanho pequeno */
 }
 
 #page-title {
-  margin: 0;
+  margin: 0; /* Remove margem padrão */
 }
 
-/* Pages */
+/* ===== PÁGINAS ===== */
 .page {
-  display: none;
-  padding: 30px;
-  animation: fade 0.3s ease;
+  display: none; /* Todas as páginas começam ocultas */
+  padding: 30px; /* Espaçamento interno */
+  animation: fade 0.3s ease; /* Animação ao aparecer */
 }
 
 .page.active {
-  display: block;
+  display: block; /* Página ativa fica visível */
 }
 
-/* Cards */
+/* ===== CARDS ===== */
 #cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  display: grid; /* Layout em grade */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  /* Cria colunas automáticas que se ajustam ao tamanho da tela */
+  gap: 20px; /* Espaço entre cards */
 }
 
 #card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-size: 18px;
-  text-align: center;
+  background: #fff; /* Fundo branco */
+  padding: 25px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave */
+  font-size: 18px; /* Tamanho do texto */
+  text-align: center; /* Centraliza conteúdo */
 }
 
-/* Animation */
+/* ===== ANIMAÇÃO ===== */
 @keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(10px); } /* Começa invisível e deslocado */
+  to { opacity: 1; transform: translateY(0); } /* Termina visível e no lugar */
 }
