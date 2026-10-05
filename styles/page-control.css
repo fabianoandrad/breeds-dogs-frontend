@@ -4,3 +4,64 @@ body {
   display:flex;
   background-color:#f5f6fa; 
 }
+
+.page.active {
+  display: block;
+}
+
+#page-title {
+  margin: 0;
+}
+
+.page {
+  display: none;
+  padding: 30px;
+  animation: fade 0.3s ease;
+}
+.logo {
+  margin: 16px 0px 0px;
+  width: 168px;
+}
+
+footer {
+  background: #fff;
+  box-shadow: 0  -2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 240px);
+}
+footer p{
+  color: darkgray;
+  font-size: 10px;
+}
+
+.menu-item {
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.menu-item:hover {
+  background: #2e2e42;
+}
+
+.menu-item.active {
+  background: #4c4cff;
+}
+
+.sidebar {
+  width: 240px;
+  background: #1e1e2f;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar ul {
+  margin: 0px 16px;
+  list-style: none;
+  padding: 0;
+}

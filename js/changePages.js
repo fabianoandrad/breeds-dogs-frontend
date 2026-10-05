@@ -18,7 +18,27 @@ menuItems.forEach(item => {
     item.classList.add('active');
     //==== Atuliza o titulo do cabeçalho da pagina exibida no momento===
    // ==== Define o titulo como o texto do item clicado
-   pageTitle.textContent = item. textContent; 
-   
+   pageTitle.textContent = item. textContent.trim(); 
+
+   //=== ajusta dependendo da pagina selecionada ===
+   if(item.textContent.trim() === "Favoritos") {
+    pageSubtitle.textContent = "Veja suas raças favoritas aqui.";
+
+   } else    
+    { pageSubtitle.textContent = "Explore raças, veja detalhes e marque seus favoritos."
+  }   
+ // ==== Troca de pagina ====
+ // obtem o nome da pagina que devve ser exibida  ( via datapage)
+  const pageToShow = item.getAttribute("data-page");
+
+ //percorre todas as paginas e ativa apenas a correspondente
+  pages.forEach (page => {
+    page.classList.remove("active");//oculta paginas
+    if (page.id === pageToShow) {
+      page.classList.add("active");//exibe a pagina correta
+
+    }
+
+  })
   })
 })
