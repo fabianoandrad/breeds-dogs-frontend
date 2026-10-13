@@ -28,18 +28,28 @@
             <h2 id="page-title">Raças </h2>
             <p id="page-subtitle"> Explore raças, veja detalhes e marque seus favoritos</p>
         </header>
-        <main>
+
+        <!-- Area onde as paginas são trocadas dinamicamente -->
+        <main class="content">
+
+            <!-- Pagina de Raças -->
             <section id="breeds" class="page active">
-                <h3>Raças</h3>
+                <p id="breeds-message" role="status"></p>
+                <div id="breeds-cards" class="cards-container"></div>
             </section>
+
             <section id="favorites" class="page">
                 <h3>Favoritos</h3>
+                <p id="favorites-message" role="status"></p>
+                <div id="favorites-cards" class="cards-container"></div>
             </section>
         </main>
         <footer>
             <p> ©️ 2026 breeds dogs</p>
         </footer>
     </div>
+    <script src="js/getAllFavorites.js"></script>
+    <script src="js/getAllBreeds.js"></script>
     <script src="js/changePages.js"></script>
 </body>
 
