@@ -32,6 +32,8 @@ body {
 }
 
 #card {
+  display: flex;
+  flex-direction: column;
   background: #fff; /* Fundo branco */
   padding: 10px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
@@ -57,6 +59,27 @@ body {
 
 .info-breed label{
   color: rgb(99, 99, 99);
+}
+
+.favorite-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.favorite-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #e0e0e0;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.favorite-button.is-favorite {
+  color: #e53935;
 }
 
 #dog-img {
