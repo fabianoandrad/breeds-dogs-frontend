@@ -26,18 +26,45 @@ body {
 /* ===== CARDS ===== */
 #cards-container {
   display: grid; /* Layout em grade */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
   /* Cria colunas automáticas que se ajustam ao tamanho da tela */
   gap: 20px; /* Espaço entre cards */
 }
 
 #card {
   background: #fff; /* Fundo branco */
-  padding: 25px; /* Espaçamento interno */
+  padding: 10px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave */
   font-size: 18px; /* Tamanho do texto */
   text-align: center; /* Centraliza conteúdo */
+}
+
+.info-name {
+  font-size: 14px; /* Mantém os rótulos um pouco maiores que os valores. */
+}
+
+.info-content {
+  min-width: 0; /* Permite que o valor encolha dentro da coluna do card. */
+  font-size: 13px; /* Deixa os valores menores que os rótulos. */
+  overflow-wrap: anywhere; /* Quebra valores longos para evitar que ultrapassem o card. */
+}
+
+.info-breed {
+  align-items: baseline; /* Alinha os textos pela linha de base, mesmo com fontes de tamanhos diferentes. */
+  text-align: left; /* Alinha as informações à esquerda dentro do card. */
+}
+
+.info-breed label{
+  color: rgb(99, 99, 99);
+}
+
+#dog-img {
+  display: block; /*faz a imagem se comportar como um bloco*/
+  width: 100%; /*ocupa toda a largura disponível dentro do card.*/
+  aspect-ratio: 4 / 3; /*mantém a proporção da imagem em 4:3, deixando a altura proporcional à largura.*/
+  object-fit: cover; /*preenche todo esse espaço sem distorcer a foto*/
+  border-radius: 8px; /**/
 }
 
 /* ===== ANIMAÇÃO ===== */

@@ -45,7 +45,7 @@
     <!-- Barra superior com título e subtítulo -->
     <header class="topbar">
       <h2 id="page-title">Raças</h2>
-      <p id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.</p>
+      <p style="color: rgb(99, 99, 99)" id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.</p>
     </header>
 
     <!-- Área onde as páginas são trocadas dinamicamente -->
@@ -56,7 +56,24 @@
         <div id="cards-container">
           <!-- Card modelo que provavelmente será preenchido via JavaScript -->
           <div id="card">
+            <img id="dog-img">
             <h3 id="card-title"></h3>
+            <div class="info-breed">
+              <span class="info-name">Origem:</span>
+              <label class="info-content" id="origin" for=""></label>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Criado para:</span>
+              <label class="info-content" id="created-for" for=""></label>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Temperamento:</span>
+              <label class="info-content" id="temperament" for=""></label>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Estimativa de vida:</span>
+              <label class="info-content" id="estimated-lifespan" for=""></label>
+            </div>
           </div>
         </div>
       </section>

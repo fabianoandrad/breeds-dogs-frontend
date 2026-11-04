@@ -4,8 +4,17 @@ const container = document.getElementById('cards-container');
 // Seleciona o card modelo (será clonado para cada raça)
 const card = document.getElementById('card');
 
-// Seleciona o título dentro do card modelo
+// // Obtem tag H3 do html título dentro do card modelo
 const cardTitle = document.getElementById('card-title');
+
+// Obtem tag img do html
+const dogImg = document.getElementById('dog-img');
+
+// Obtem tag label do html
+const origin = document.getElementById('origin');
+const createdFor = document.getElementById('created-for');
+const temperament = document.getElementById('temperament');
+const estimatedLifespan = document.getElementById('estimated-lifespan');
 
 // Faz uma requisição para a API local que retorna as raças de cães
 fetch("http://localhost:8000/api/dogs")
@@ -15,9 +24,15 @@ fetch("http://localhost:8000/api/dogs")
         // Percorre cada raça retornada pela API
         data.forEach(breed => {
 
-            // Atualiza o título do card modelo com o nome da raça
+            // Atribuimos os valores de cada objeto do json nos cards modelos como nome da raça, imagem, origen...
             // IMPORTANTE: isso altera o card original antes de clonar
             cardTitle.textContent = breed.name;
+            dogImg.src = breed.image.url;
+            dogImg.alt = breed.name;
+            origin.textContent = breed.origin;
+            createdFor.textContent = breed.bred_for;
+            temperament.textContent = breed.temperament;
+            estimatedLifespan.textContent = breed.life_span;
 
             // Clona o card inteiro (true = clona também os elementos internos)
             const newCard = card.cloneNode(true);
