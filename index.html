@@ -83,11 +83,30 @@
 
       <!-- Página de favoritos -->
       <section id="favorite" class="page">
-        <div id="cards-container">
-          <!-- Cards fixos apenas como exemplo -->
-          <div id="card">Item favorito 1</div>
-          <div id="card">Item favorito 2</div>
-          <div id="card">Item favorito 3</div>
+        <div id="favorite-cards-container">
+          <div class="favorite-card">
+            <img class="favorite-dog-img">
+            <h3 class="card-title"></h3>
+            <div class="info-breed">
+              <span class="info-name">Origem:</span>
+              <span class="info-content origin"></span>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Criado para:</span>
+              <span class="info-content created-for"></span>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Temperamento:</span>
+              <span class="info-content temperament"></span>
+            </div>
+            <div class="info-breed">
+              <span class="info-name">Estimativa de vida:</span>
+              <span class="info-content estimated-lifespan"></span>
+            </div>
+            <div class="favorite-actions">
+              <button class="favorite-button is-favorite" type="button" aria-label="Remover dos favoritos">♥</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -101,5 +120,6 @@
   <!-- Scripts responsáveis pela lógica da página -->
   <script src="js/changePages.js"></script>
   <script src="js/getAllBreeds.js"></script>
+  <script src="js/getAllFavorites.js"></script>
 </body>
 </html>
