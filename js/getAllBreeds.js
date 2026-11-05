@@ -4,7 +4,7 @@ const container = document.getElementById("cards-container");
 // Seleciona o card modelo (será clonado para cada raça)
 const card = document.getElementById("card");
 
-// // Obtem tag H3 do html título dentro do card modelo
+// Obtem tag H3 do html título dentro do card modelo
 const cardTitle = document.getElementById("card-title");
 
 // Obtem tag img do html

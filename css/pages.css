@@ -24,16 +24,18 @@ body {
 }
 
 /* ===== CARDS ===== */
+/* Aplica o mesmo layout em grade às listas de raças e de favoritos. */
 #cards-container, #favorite-cards-container {
   display: grid; /* Layout em grade */
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-  /* Cria colunas automáticas que se ajustam ao tamanho da tela */
+  /* Cria colunas responsivas: cada card tem pelo menos 240px e pode crescer. */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px; /* Espaço entre cards */
 }
 
+/* Compartilha a aparência entre o card modelo e os cards favoritos clonados. */
 #card, .favorite-card {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Usa Flexbox para organizar os elementos internos. */
+  flex-direction: column; /* Empilha imagem, informações e botão verticalmente. */
   background: #fff; /* Fundo branco */
   padding: 10px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
@@ -42,57 +44,100 @@ body {
   text-align: center; /* Centraliza conteúdo */
 }
 
+/* Define o tamanho dos nomes dos campos, como "Origem" e "Temperamento". */
 .info-name {
   font-size: 14px; /* Mantém os rótulos um pouco maiores que os valores. */
 }
 
+/* Formata os valores recebidos para cada campo do card. */
 .info-content {
   min-width: 0; /* Permite que o valor encolha dentro da coluna do card. */
   font-size: 13px; /* Deixa os valores menores que os rótulos. */
   overflow-wrap: anywhere; /* Quebra valores longos para evitar que ultrapassem o card. */
 }
 
+/* Alinha cada rótulo e seu valor à esquerda dentro do card. */
 .info-breed {
   align-items: baseline; /* Alinha os textos pela linha de base, mesmo com fontes de tamanhos diferentes. */
   text-align: left; /* Alinha as informações à esquerda dentro do card. */
 }
 
-.info-breed label{
-  color: rgb(99, 99, 99);
+/* Usa cinza nos valores dos campos para diferenciá-los visualmente dos rótulos. */
+.info-breed label {
+  color: rgb(99, 99, 99); /* Define a cor do texto dos valores. */
 }
 
+/* Posiciona a área do botão de favorito no rodapé do card. */
 .favorite-actions {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: auto;
-  padding-top: 8px;
+  display: flex; /* Permite alinhar o botão dentro desta área. */
+  justify-content: flex-start; /* Mantém o botão à esquerda. */
+  margin-top: auto; /* Empurra o botão para baixo quando há espaço livre no card. */
+  padding-top: 8px; /* Cria um espaço entre as informações e o botão. */
 }
 
+/* Dá ao botão uma área circular e remove sua aparência padrão de botão. */
 .favorite-button {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: #e0e0e0;
-  font-size: 28px;
-  line-height: 1;
-  cursor: pointer;
+  display: grid; /* Usa Grid para centralizar o ícone no botão. */
+  width: 40px; /* Define a largura da área clicável. */
+  height: 40px; /* Define a altura da área clicável. */
+  place-items: center; /* Centraliza o coração horizontal e verticalmente. */
+  padding: 0; /* Remove o espaçamento interno padrão. */
+  border: 0; /* Remove a borda padrão do navegador. */
+  border-radius: 50%; /* Transforma a área do botão em um círculo. */
+  background: #fff1f1; /* Aplica um fundo rosa claro. */
+  color: #9e9e9e; /* Define a cor padrão do ícone. */
+  cursor: pointer; /* Mostra que o botão pode ser clicado. */
+  /* Anima suavemente mudanças de cor, fundo e escala. */
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
+/* Define o tamanho do SVG externo que desenha o coração. */
+.favorite-icon {
+  width: 23px; /* Define a largura do coração. */
+  height: 23px; /* Define a altura do coração. */
+  fill: currentColor; /* Usa a cor atual do botão para preencher o coração. */
+  transition: transform 180ms ease; /* Suaviza a animação de escala do ícone. */
+}
+
+/* Aumenta levemente o botão quando o ponteiro passa sobre ele. */
+.favorite-button:hover {
+  transform: scale(1.08); /* Amplia o botão em 8% para indicar interação. */
+}
+
+/* Mostra um contorno ao navegar até o botão usando teclado. */
+.favorite-button:focus-visible {
+  outline: 2px solid #e53935; /* Desenha um contorno vermelho de acessibilidade. */
+  outline-offset: 3px; /* Afasta o contorno da borda do botão. */
+}
+
+/* Indica que a raça já foi adicionada aos favoritos. */
 .favorite-button.is-favorite {
-  color: #e53935;
+  color: #e53935; /* Pinta o coração de vermelho. */
 }
 
+/* Dá um pequeno destaque ao coração favoritado quando o ponteiro passa sobre ele. */
+.favorite-button.is-favorite:hover .favorite-icon {
+  transform: scale(1.12); /* Amplia o coração em 12%. */
+}
+
+/* Mantém a imagem no mesmo formato em cards de raças e de favoritos. */
 #dog-img,
 .favorite-dog-img {
-  display: block; /*faz a imagem se comportar como um bloco*/
-  width: 100%; /*ocupa toda a largura disponível dentro do card.*/
-  aspect-ratio: 4 / 3; /*mantém a proporção da imagem em 4:3, deixando a altura proporcional à largura.*/
-  object-fit: cover; /*preenche todo esse espaço sem distorcer a foto*/
-  border-radius: 8px; /**/
+  display: block; /* Faz a imagem se comportar como um bloco. */
+  width: 100%; /* Ocupa toda a largura disponível dentro do card. */
+  aspect-ratio: 4 / 3; /* Mantém a proporção 4:3 entre largura e altura. */
+  object-fit: cover; /* Preenche a área sem distorcer, cortando o excesso se necessário. */
+  border-radius: 8px; /* Arredonda os cantos da imagem. */
 }
 
 /* ===== ANIMAÇÃO ===== */
 @keyframes fade {
-  from { opacity: 0; transform: translateY(10px); } /* Começa invisível e deslocado */
-  to { opacity: 1; transform: translateY(0); } /* Termina visível e no lugar */
+  from {
+    opacity: 0; /* Inicia a página transparente. */
+    transform: translateY(10px); /* Inicia 10px abaixo da posição final. */
+  }
+  to {
+    opacity: 1; /* Termina totalmente visível. */
+    transform: translateY(0); /* Termina na posição original. */
+  }
 }
