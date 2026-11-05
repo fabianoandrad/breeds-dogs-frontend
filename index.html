@@ -33,7 +33,7 @@
     <nav style="margin-top: 40px;">
       <ul>
         <!-- Cada item possui um data-page que será usado pelo JS para trocar páginas -->
-        <li class="menu-item active" data-page="breeeds">Raças</li>
+        <li class="menu-item active" data-page="breeds">Raças</li>
         <li class="menu-item" data-page="favorite">Favoritos</li>
       </ul>
     </nav>
@@ -52,7 +52,7 @@
     <main class="content">
 
       <!-- Página de raças -->
-      <section id="breeeds" class="page active">
+      <section id="breeds" class="page active">
         <div id="cards-container">
           <!-- Card modelo que provavelmente será preenchido via JavaScript -->
           <div id="card">
@@ -75,7 +75,7 @@
               <label class="info-content" id="estimated-lifespan" for=""></label>
             </div>
             <div class="favorite-actions">
-              <button class="favorite-button" type="button" aria-label="Adicionar aos favoritos">♥</button>
+              <button class="favorite-button" type="button">♥</button>
             </div>
           </div>
         </div>
@@ -85,26 +85,26 @@
       <section id="favorite" class="page">
         <div id="favorite-cards-container">
           <div class="favorite-card">
-            <img class="favorite-dog-img">
-            <h3 class="card-title"></h3>
+            <img id="favorite-dog-img">
+            <h3 id="card-title"></h3>
             <div class="info-breed">
               <span class="info-name">Origem:</span>
-              <span class="info-content origin"></span>
+              <label class="info-content" id="origin"></label>
             </div>
             <div class="info-breed">
               <span class="info-name">Criado para:</span>
-              <span class="info-content created-for"></span>
+              <label class="info-content" id="created-for"></label>
             </div>
             <div class="info-breed">
               <span class="info-name">Temperamento:</span>
-              <span class="info-content temperament"></span>
+              <label class="info-content" id="temperament"></label>
             </div>
             <div class="info-breed">
               <span class="info-name">Estimativa de vida:</span>
-              <span class="info-content estimated-lifespan"></span>
+              <label class="info-content" id="estimated-lifespan"></label>
             </div>
             <div class="favorite-actions">
-              <button class="favorite-button is-favorite" type="button" aria-label="Remover dos favoritos">♥</button>
+              <button class="favorite-button is-favorite" type="button">♥</button>
             </div>
           </div>
         </div>
