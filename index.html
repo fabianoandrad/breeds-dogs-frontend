@@ -1,125 +1,129 @@
 <!DOCTYPE html>
-foram<html lang="pt-BR">
+<html lang="pt-BR">
 
-  <!-- Importa o arquivo CSS externo -->
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/footer.css">
+<head>
+    <!-- Importa o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
 
-  <!-- Barra lateral fixa -->
-  <aside class="sidebar">
+    <!-- Barra lateral fixa -->
+    <aside class="sidebar">
 
-    <!-- Container para centralizar o logo -->
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="assets/img/dog-house-lighten2.png" alt="Logo" class="logo"> 
+        <!-- Container para centralizar o logo -->
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="assets/img/dog-house-lighten2.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Título da sidebar -->
+        <h2 style="text-align: center; margin-top: 6px;">Raças de cães</h2>
+
+        <!-- Menu lateral -->
+        <nav style="margin-top: 40px;">
+            <ul>
+                <!-- Cada item possui um data-page que será usado pelo JS para trocar páginas -->
+                <li class="menu-item active" data-page="breeds">Raças</li>
+                <li class="menu-item" data-page="favorite">Favoritos</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <div class="main">
+
+        <!-- Barra superior com título e subtítulo -->
+        <header class="topbar">
+            <h2 id="page-title">Raças</h2>
+            <p style="color: rgb(99, 99, 99)" id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.
+            </p>
+        </header>
+
+        <!-- Área onde as páginas são trocadas dinamicamente -->
+        <main class="content">
+
+            <!-- Página de raças -->
+            <section id="breeds" class="page active">
+                <div id="cards-container">
+                    <!-- Card modelo que provavelmente será preenchido via JavaScript -->
+                    <div id="card">
+                        <img id="dog-img">
+                        <h3 id="card-title"></h3>
+                        <div class="info-breed">
+                            <span class="info-name">Origem:</span>
+                            <label class="info-content" id="origin" for=""></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Criado para:</span>
+                            <label class="info-content" id="created-for" for=""></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Temperamento:</span>
+                            <label class="info-content" id="temperament" for=""></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Estimativa de vida:</span>
+                            <label class="info-content" id="estimated-lifespan" for=""></label>
+                        </div>
+                        <div class="favorite-actions">
+                            <button class="favorite-button" type="button" aria-label="Adicionar aos favoritos">
+                                <svg class="favorite-icon">
+                                    <use href="assets/svg/heart.svg#heart"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de favoritos -->
+            <section id="favorite" class="page">
+                <div id="favorite-cards-container">
+                    <div class="favorite-card">
+                        <img id="favorite-dog-img">
+                        <h3 id="card-title"></h3>
+                        <div class="info-breed">
+                            <span class="info-name">Origem:</span>
+                            <label class="info-content" id="origin"></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Criado para:</span>
+                            <label class="info-content" id="created-for"></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Temperamento:</span>
+                            <label class="info-content" id="temperament"></label>
+                        </div>
+                        <div class="info-breed">
+                            <span class="info-name">Estimativa de vida:</span>
+                            <label class="info-content" id="estimated-lifespan"></label>
+                        </div>
+                        <div class="favorite-actions">
+                            <button class="favorite-button is-favorite" type="button"
+                                aria-label="Remover dos favoritos">
+                                <svg class="favorite-icon">
+                                    <use href="assets/svg/heart.svg#heart"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2026 Breeds Dogs</p>
+        </footer>
     </div>
 
-    <!-- Título da sidebar -->
-    <h2 style="text-align: center; margin-top: 6px;">Raças de cães</h2>
-
-    <!-- Menu lateral -->
-    <nav style="margin-top: 40px;">
-      <ul>
-        <!-- Cada item possui um data-page que será usado pelo JS para trocar páginas -->
-        <li class="menu-item active" data-page="breeds">Raças</li>
-        <li class="menu-item" data-page="favorite">Favoritos</li>
-      </ul>
-    </nav>
-  </aside>
-
-  <!-- Conteúdo principal -->
-  <div class="main">
-
-    <!-- Barra superior com título e subtítulo -->
-    <header class="topbar">
-      <h2 id="page-title">Raças</h2>
-      <p style="color: rgb(99, 99, 99)" id="page-subtitle">Explore raças, veja detalhes e marque seus favoritos.</p>
-    </header>
-
-    <!-- Área onde as páginas são trocadas dinamicamente -->
-    <main class="content">
-
-      <!-- Página de raças -->
-      <section id="breeds" class="page active">
-        <div id="cards-container">
-          <!-- Card modelo que provavelmente será preenchido via JavaScript -->
-          <div id="card">
-            <img id="dog-img">
-            <h3 id="card-title"></h3>
-            <div class="info-breed">
-              <span class="info-name">Origem:</span>
-              <label class="info-content" id="origin" for=""></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Criado para:</span>
-              <label class="info-content" id="created-for" for=""></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Temperamento:</span>
-              <label class="info-content" id="temperament" for=""></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Estimativa de vida:</span>
-              <label class="info-content" id="estimated-lifespan" for=""></label>
-            </div>
-            <div class="favorite-actions">
-              <button class="favorite-button" type="button" aria-label="Adicionar aos favoritos">
-                <svg class="favorite-icon">
-                  <use href="assets/svg/heart.svg#heart"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Página de favoritos -->
-      <section id="favorite" class="page">
-        <div id="favorite-cards-container">
-          <div class="favorite-card">
-            <img id="favorite-dog-img">
-            <h3 id="card-title"></h3>
-            <div class="info-breed">
-              <span class="info-name">Origem:</span>
-              <label class="info-content" id="origin"></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Criado para:</span>
-              <label class="info-content" id="created-for"></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Temperamento:</span>
-              <label class="info-content" id="temperament"></label>
-            </div>
-            <div class="info-breed">
-              <span class="info-name">Estimativa de vida:</span>
-              <label class="info-content" id="estimated-lifespan"></label>
-            </div>
-            <div class="favorite-actions">
-              <button class="favorite-button is-favorite" type="button" aria-label="Remover dos favoritos">
-                <svg class="favorite-icon">
-                  <use href="assets/svg/heart.svg#heart"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-      <p>© 2026 Breeds Dogs</p>
-    </footer>
-  </div>
-
-  <!-- Scripts responsáveis pela lógica da página -->
-  <script src="js/changePages.js"></script>
-  <script src="js/getAllBreeds.js"></script>
-  <script src="js/getAllFavorites.js"></script>
+    <!-- Scripts responsáveis pela lógica da página -->
+    <script src="js/changePages.js"></script>
+    <script src="js/getAllBreeds.js"></script>
+    <script src="js/getAllFavorites.js"></script>
 </body>
 
 </html>
