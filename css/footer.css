@@ -1,0 +1,13 @@
+footer {
+  background: #fff; /* Fundo branco */
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Sombra superior */
+  text-align: center; /* Centraliza texto */
+  position: fixed; /* Fixa no rodapé */
+  bottom: 0; /* Gruda na parte inferior */
+  width: calc(100% - 240px); /* Ajusta largura considerando a sidebar */
+}
+
+footer p {
+  color: darkgray; /* Cor do texto */
+  font-size: 10px; /* Tamanho pequeno */
+}

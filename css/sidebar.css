@@ -1,0 +1,35 @@
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 240px; /* Largura fixa da barra lateral */
+  background: #1e1e2f; /* Cor escura */
+  color: #fff; /* Texto branco */
+  height: 100vh; /* Altura total da tela */
+  position: fixed; /* Fixa no lado esquerdo */
+}
+
+.logo {
+  margin: 16px 0px 0px; /* Espaçamento superior */
+  width: 168px; /* Tamanho da imagem */
+}
+
+.sidebar ul {
+  margin: 0px 16px; /* Espaçamento lateral */
+  list-style: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove padding padrão */
+}
+
+.menu-item {
+  padding: 14px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de clique */
+  border-radius: 6px; /* Bordas arredondadas */
+  margin-bottom: 8px; /* Espaço entre itens */
+  transition: background 0.3s; /* Animação suave ao passar o mouse */
+}
+
+.menu-item:hover {
+  background: #2e2e42; /* Cor ao passar o mouse */
+}
+
+.menu-item.active {
+  background: #4c4cff; /* Cor do item ativo */
+}
