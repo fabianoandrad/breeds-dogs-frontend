@@ -80,6 +80,9 @@ async function loadBreeds() {
     console.log(error);
 
   } finally {
+    if(favoriteBreedIds.length == 0){
+      notFoundBreeds.textContent = 'Nenhuma raça encontrada!';
+    }
     loader.style.display = 'none';
 
   }

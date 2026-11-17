@@ -1,6 +1,9 @@
 // Seleciona todas os itens do menu lateral 
 const menuItems = document.querySelectorAll('.menu-item');
 
+// Not found breeds
+const notFoundBreeds = document.querySelector(".not-found-breeds");
+
 // Spinner progress
 const loader = document.querySelector('.loader');
 
@@ -14,6 +17,7 @@ const pageSubtitle = document.getElementById('page-subtitle');
 // Para cada item do meu menu lateral, adiciona um evento de clique
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
+    notFoundBreeds.textContent = '';
     loader.style.display = '';
 
     // ====Atuali o item ativo do menu lateral====

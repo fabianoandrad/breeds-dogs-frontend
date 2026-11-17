@@ -2,9 +2,6 @@
 const favoriteContainer = document.getElementById("favorite-cards-container");
 const favoriteCard = favoriteContainer.querySelector(".favorite-card");
 
-// Not found breeds
-//const notFoundBreeds = document.querySelector(".not-found-breeds").style.display = 'none';
-
 // Guarda referências aos campos do modelo para preenchê-los com os dados de cada raça
 const favoriteImage = document.getElementById("favorite-dog-img");
 const favoriteTitle = document.getElementById("card-title");
@@ -76,10 +73,9 @@ async function loadFavoriteBreeds() {
     console.log(error);
 
   }finally{
-  //     if(favoriteBreedIds.length == 0){
-  //   notFoundBreeds.style.display = '';
-  //   return;
-  // }
+    if(favoriteBreedIds.length == 0){
+      notFoundBreeds.textContent = 'Nenhuma raça foi favoritada!';
+    }
     loader.style.display = 'none';
   }
 }
