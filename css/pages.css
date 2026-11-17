@@ -3,7 +3,12 @@ body {
   margin: 0; /* Remove margens padrão do navegador */
   font-family: Arial, sans-serif; /* Define fonte global */
   display: flex; /* Permite que sidebar e conteúdo fiquem lado a lado */
-  background: #f5f6fa; /* Cor de fundo suave */
+    background: linear-gradient(
+    90deg,
+    #fff1ebd5 0%,
+    #ace1f934 50%,
+    #d4fcf04f 100%
+  );
 }
 
 /* ===== ÁREA PRINCIPAL ===== */
@@ -16,7 +21,7 @@ body {
 .page {
   display: none; /* Todas as páginas começam ocultas */
   padding: 30px; /* Espaçamento interno */
-  animation: fade 0.3s ease; /* Animação ao aparecer */
+  animation: fade 1s ease; /* Animação ao aparecer */
 }
 
 .page.active {

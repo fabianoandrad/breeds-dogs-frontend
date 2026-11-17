@@ -37,7 +37,8 @@ menuItems.forEach(item => {
     }else { 
       loadBreeds();
       pageSubtitle.textContent = "Explore raças, veja detalhes e marque seus favoritos."
-    }   
+    }  
+     
     // ==== Troca de pagina ====
     // obtem o nome da pagina que devve ser exibida  ( via datapage)
     const pageToShow = item.getAttribute("data-page");
